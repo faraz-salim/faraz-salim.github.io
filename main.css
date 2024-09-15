@@ -1,0 +1,136 @@
+:root {
+    --green: #00FF00;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #757575;
+    --red: #9b0000;
+    --blue: #07078a;
+    --purple: #e80ce8;
+}
+
+body {
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+
+.list {
+    list-style: square;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: var(--gray);
+    --btnFontColor: var(--white);
+    --btnHoverBg: var(--black); /* Add hover background color for light theme */
+    --btnHoverFontColor: var(--white); /* Add hover font color for light theme */
+  }
+  
+  .dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--white);
+    --btnBg: var(--gray);
+    --btnFontColor: var(--white);
+    --btnHoverBg: var(--white); /* Add hover background color for dark theme */
+    --btnHoverFontColor: var(--black); /* Add hover font color for dark theme */
+  }
+
+.btn {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border: 2px solid #919191;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: var(--btnBg); 
+    color: var(--btnFontColor); 
+    z-index: 2;
+  }
+
+.light-theme .btn:hover {
+    background-color: var(--btnHoverBg); /* Apply light theme hover background color */
+    color: var(--btnHoverFontColor); /* Apply light theme hover font color */
+}
+
+.dark-theme .btn:hover {
+    background-color: var(--btnHoverBg); /* Apply dark theme hover background color */
+    color: var(--btnHoverFontColor); /* Apply dark theme hover font color */
+}
+  .container {
+    position: relative;
+    width: 40%; 
+    margin: 0 auto; /* Centers the container on the page */
+    text-align: center; /* Center-aligns text inside the container */
+  }
+  
+  .image {
+    display: block;
+    width: 100%; 
+    height: auto;
+    opacity: 1;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    border-radius: 12px;
+  }
+  
+  .middle {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  
+  .container:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+ 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 12px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #5d5d5d;
+  }
